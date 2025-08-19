@@ -1,0 +1,22 @@
+# 永豐金證券 Shioaji API 設定範例
+# 請將此內容複製到 .env 檔案並填入您的實際資料
+
+API_KEY=您的API金鑰
+SECRET_KEY=您的秘密金鑰
+CA_CERT_PATH=您的憑證檔案路徑
+CA_PASSWORD=您的憑證密碼
+
+# 憑證路徑設定範例：
+# 相對路徑（推薦）：
+# CA_CERT_PATH=./your_cert.p12
+# CA_CERT_PATH=cert/your_cert.p12
+# 
+# 絕對路徑：
+# CA_CERT_PATH=C:\Users\YourName\Documents\cert.p12
+# CA_CERT_PATH=/Users/YourName/Documents/cert.p12
+
+# 使用說明：
+# 1. 在專案根目錄創建 .env 檔案
+# 2. 複製上述內容到 .env 檔案
+# 3. 將「您的...」替換為實際的值
+# 4. 將憑證檔案放在專案目錄中，使用相對路徑最方便 
