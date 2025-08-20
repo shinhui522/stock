@@ -1,7 +1,23 @@
+# Exported from Render on 2025-08-20T10:10:39Z
 services:
-  - type: web
-    name: your-service-name
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: streamlit run your_script.py
-    pythonVersion: 3.11.9
+- type: web
+  name: stock
+  runtime: python
+  repo: https://github.com/shinhui522/stock
+  plan: free
+  envVars:
+  - key: CA_PASSWORD
+    sync: false
+  - key: CA_CERT_PATH
+    sync: false
+  - key: SECRET_KEY
+    sync: false
+  - key: API_KEY
+    sync: false
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: streamlit run streamlit_app.py
+  pythonVersion: 3.11.9
+  autoDeployTrigger: commit
+version: "1"
+
