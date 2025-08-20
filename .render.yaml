@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: your-service-name
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run your_script.py
+    pythonVersion: 3.11.9

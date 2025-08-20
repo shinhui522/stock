@@ -447,15 +447,15 @@ class ShioajiExtended:
             print(f"⚠️ 替代搜尋失敗: {e}")
             return []
     
-    def disconnect(self):
-        """斷開連接"""
+    def logout(self):
+        """登出並斷開連接"""
         if self.api and self.is_connected:
             try:
                 self.api.logout()
                 self.is_connected = False
-                print("✅ 已斷開 Shioaji API 連接")
+                print("✅ 已成功登出並斷開 Shioaji API 連接")
             except Exception as e:
-                print(f"❌ 斷開連接時發生錯誤: {e}")
+                print(f"❌ 登出時發生錯誤: {e}")
 
 def interactive_menu():
     """互動式選單"""

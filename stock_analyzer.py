@@ -292,7 +292,7 @@ class StockAnalyzer:
         fig = make_subplots(
             rows=2, cols=1,
             subplot_titles=(f'{self.symbol} 股價走勢圖', '成交量'),
-            vertical_spacing=0.1,
+            vertical_spacing=0.4,
             row_heights=[0.7, 0.3]
         )
         

@@ -307,7 +307,11 @@ elif app_mode == "當日即時分析":
                 with st.spinner(f"正在取消訂閱 {st.session_state.subscribed_stock}..."):
                     contract = api.Contracts.Stocks[st.session_state.subscribed_stock]
                     api.quote.unsubscribe(contract, quote_type='tick')
+                    st.session_state.shioaji_client.logout()
+                    st.session_state.shioaji_client = None
                     st.session_state.subscribed_stock = None
+                    st.success("已成功登出並斷開連接。")
+                    time.sleep(1) # 短暫延遲讓使用者看到訊息
                     st.rerun()
 
     # --- 顯示即時數據與自動刷新 ---
